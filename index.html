@@ -7,26 +7,34 @@
     <title>Ezaluz</title>
 
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css">
     <link rel="stylesheet" href="./assets/css/app.css">
 
     <script src="./assets/js/jquery-3.6.3.min.js"></script>
+    <script src="./assets/js/swiper-bundle.min.js"></script>
     <script src="./assets/js/bootstrap.min.js"></script>
+    <script src="./assets/js/app.js"></script>
 </head>
 <body>
     
-    <header class="header bg-white fixed-top ps-md-3">
-        <nav class="navbar navbar-expand-md">
+    <header class="header bg-white fixed-top">
+        <div class="header-top text-center text-white py-2">
+            500 ₺ ÜZERİ SİPARİŞLERİNİZDE KARGO ÜCRETSİZ
+        </div>
+        <nav class="navbar navbar-expand-md ps-md-4">
             <div class="container-fluid">
                 <div class="row gx-0 gx-md-4">
                     <div class="header-left col-7 col-sm">
-                        <button type="button" class="btn btn-header ps-0" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                        <button type="button" class="btn btn-header ps-0" data-bs-toggle="offcanvas" data-bs-target="#offCanvasSidebar" aria-controls="offcanvasRight">
                            <svg width="24" height="24" clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m13 16.745c0-.414-.336-.75-.75-.75h-9.5c-.414 0-.75.336-.75.75s.336.75.75.75h9.5c.414 0 .75-.336.75-.75zm9-5c0-.414-.336-.75-.75-.75h-18.5c-.414 0-.75.336-.75.75s.336.75.75.75h18.5c.414 0 .75-.336.75-.75zm-4-5c0-.414-.336-.75-.75-.75h-14.5c-.414 0-.75.336-.75.75s.336.75.75.75h14.5c.414 0 .75-.336.75-.75z" fill-rule="nonzero"/></svg>
                         </button>
-                        <a class="navbar-brand" href="#">
+                        <a class="navbar-brand" href="/">
                             EZALUZ
                         </a>
                     </div>
+                    <!-- 
                     <div class="header-center col d-none d-sm-inline"></div>
+                    -->
                     <div class="header-right col-5 col-sm">
                         <ul class="text-end">
                             <!-- 
@@ -35,10 +43,11 @@
                             </li>
                             -->
                             <li>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M12 2c2.757 0 5 2.243 5 5.001 0 2.756-2.243 5-5 5s-5-2.244-5-5c0-2.758 2.243-5.001 5-5.001zm0-2c-3.866 0-7 3.134-7 7.001 0 3.865 3.134 7 7 7s7-3.135 7-7c0-3.867-3.134-7.001-7-7.001zm6.369 13.353c-.497.498-1.057.931-1.658 1.302 2.872 1.874 4.378 5.083 4.972 7.346h-19.387c.572-2.29 2.058-5.503 4.973-7.358-.603-.374-1.162-.811-1.658-1.312-4.258 3.072-5.611 8.506-5.611 10.669h24c0-2.142-1.44-7.557-5.631-10.647z"/></svg>
+                                <svg enable-background="new 0 0 512 512" width="20" height="20" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><g><g><path d="m256 253.7c-62 0-112.4-50.4-112.4-112.4s50.4-112.4 112.4-112.4 112.4 50.4 112.4 112.4-50.4 112.4-112.4 112.4zm0-195.8c-46 0-83.4 37.4-83.4 83.4s37.4 83.4 83.4 83.4 83.4-37.4 83.4-83.4-37.4-83.4-83.4-83.4z"></path></g><g><path d="m452.1 483.2h-392.2c-8 0-14.5-6.5-14.5-14.5 0-106.9 94.5-193.9 210.6-193.9s210.6 87 210.6 193.9c0 8-6.5 14.5-14.5 14.5zm-377-29.1h361.7c-8.1-84.1-86.1-150.3-180.8-150.3s-172.7 66.2-180.9 150.3z"></path></g></g></svg>
                             </li>
-                            <li>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M16 6v-2c0-2.209-1.791-4-4-4s-4 1.791-4 4v2h-5v18h18v-18h-5zm-7-2c0-1.654 1.346-3 3-3s3 1.346 3 3v2h-6v-2zm10 18h-14v-14h3v1.5c0 .276.224.5.5.5s.5-.224.5-.5v-1.5h6v1.5c0 .276.224.5.5.5s.5-.224.5-.5v-1.5h3v14z"/></svg>
+                            <li class="shopping-bag">
+                                <svg width="20" height="20" fill="currentColor" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="m26 8.9a1 1 0 0 0 -1-.9h-3a6 6 0 0 0 -12 0h-3a1 1 0 0 0 -1 .9l-1.78 17.8a3 3 0 0 0 .78 2.3 3 3 0 0 0 2.22 1h17.57a3 3 0 0 0 2.21-1 3 3 0 0 0 .77-2.31zm-10-4.9a4 4 0 0 1 4 4h-8a4 4 0 0 1 4-4zm9.53 23.67a1 1 0 0 1 -.74.33h-17.58a1 1 0 0 1 -.74-.33 1 1 0 0 1 -.26-.77l1.7-16.9h2.09v3a1 1 0 0 0 2 0v-3h8v3a1 1 0 0 0 2 0v-3h2.09l1.7 16.9a1 1 0 0 1 -.26.77z"></path></svg>
+                                <span class="count">2</span>
                             </li>
                         </ul>
                     </div>
@@ -47,655 +56,68 @@
         </nav>
     </header>
 
+    <div class="offcanvas offcanvas-sidebar offcanvas-start" tabindex="-1" id="offCanvasSidebar" aria-labelledby="offCanvasSidebarLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offCanvasSidebarLabel">EZALUZ</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="menu">
+                <li><a href="">Ana Sayfa</a></li>
+                <li><a href="">Yeni Gelenler</a></li>
+                <li><a href="">Giyim</a></li>
+                <li><a href="">Elbiseler</a></li>
+                <li><a href="">Büstiyerler</a></li>
+                <li><a href="">Bluzlar</a></li>
+                <li><a href="">Basic</a></li>
+                <li><a href="">Takımlar</a></li>
+                <hr>
+                <li><a href="">Sepetim</a></li>
+                <li><a href="">Siparişlerim</a></li>
+                <li><a href="">Giriş Yap</a></li>
+                <li><a href="">Üyelik Oluştur</a></li>
+            </ul>
+        </div>
+    </div>
+
     <main class="main ps-md-3">
-        <div class="block product-content">
+        <div class="block home-banner">
             <div class="container-fluid">
-                <div class="row gx-0 gx-md-4 my-md-4">
-                    <div class="col-12 col-sm-7 col-md-8">
-                        <div class="product-image">
-                            <div class="item">
-                                <img src="./assets/img/demo-1.jpeg" alt="product" class="w-100"/>
-                            </div>
-                            <div class="item">
-                                <img src="./assets/img/demo-6.jpeg" alt="product" class="w-100"/>
-                            </div>
-                            <div class="item">
-                                <img src="./assets/img/demo-3.jpeg" alt="product" class="w-100"/>
-                            </div>
-                            <div class="item">
-                                <img src="./assets/img/demo-4.jpeg" alt="product" class="w-100"/>
-                            </div>
-                            <div class="item">
-                                <img src="./assets/img/demo-5.jpeg" alt="product" class="w-100"/>
-                            </div>
-                            <div class="item">
-                                <img src="./assets/img/demo-1.jpeg" alt="product" class="w-100"/>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-sm-5 col-md-4">
-                        <div class="product-detail py-4 py-md-0 pe-md-5 me-md-5 sticky-md-top">
-                            <div class="row gx-0">
-                                <div class="col-6 col-md-6">
-                                    <h1 class="fw-bold">
-                                        Mini kabarık siyah elbise
-                                    </h1>
-                                </div>
-                                <div class="col-6 col-md-6 text-end">
-                                    <span class="product-price">
-                                        739,90 TL
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="product-color-list mt-3 mt-md-3">
-                                <span class="product-color-title">
-                                    RENKLER
-                                </span>
-                                <ul>
-                                    <li class="product-color-item">
-                                        <a href="">
-                                            <span style="background-color: #46753c;"></span>
-                                        </a>
-                                    </li>
-                                    <li class="product-color-item">
-                                        <a href="">
-                                            <span style="background-color: #5c19b3;"></span>
-                                        </a>
-                                    </li>
-                                    <li class="product-color-item">
-                                        <a href="">
-                                            <span style="background-color: #e7004d;"></span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="product-size-list mt-3 mt-md-3">
-                                <span class="product-size-title">
-                                    Beden
-                                </span>
-                                <ul>
-                                    <li>
-                                        <button type="button" class="btn">
-                                            S
-                                        </button>
-                                        <button type="button" class="btn" >
-                                            M
-                                        </button>
-                                        <button type="button" class="btn">
-                                            L
-                                        </button>
-                                    </li>
-                                </ul>
-                            </div>
-
-                            <div class="product-add-to-basket mt-3 mt-md-3">
-                                <a href="" class="btn btn-dark w-100 py-3 py-md-3">Sepete Ekle</a>
-                            </div>
-
-                            <div class="product-info-detail mt-4 mt-md-5">
-                                <div class="row">
-                                    <div class="col-12 col-md-12">
-                                        <p class="product-info-code">
-                                            SK290010
-                                        </p>
-                                        <ul>
-                                            <li>Astar</li>
-                                            <li>Esnek kumaş</li>
-                                            <li>Rahat yıkanabilir ürün</li>
-                                            <li>Mini kesim</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="row gx-0 mt-4 mt-md-4">
-                                    <div class="col-12 col-md-12">
-                                        <div class="collapse-list">
-                                            <ul class="list">
-                                                <li>
-                                                    <div
-                                                        data-bs-toggle="collapse"
-                                                        class="question py-4 py-md-4 collapsed collapse-icon-wrap"
-                                                        href="#faq1"
-                                                        aria-expanded="false"
-                                                    >
-                                                        Kumaş / Bakım
-                                                        <i class="collapse-icon"></i>
-                                                    </div>
-                                                    <div
-                                                        id="faq1"
-                                                        class="answer collapse"
-                                                        data-bs-parent=".faq-list"
-                                                    >
-                                                        <div class="mb-md-4">
-                                                            <p>
-                                                                content
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div
-                                                        data-bs-toggle="collapse"
-                                                        class="question py-4 py-md-4 collapsed collapse-icon-wrap"
-                                                        href="#faq2"
-                                                        aria-expanded="false"
-                                                    >
-                                                        Teslimat
-                                                        <i class="collapse-icon"></i>
-                                                    </div>
-                                                    <div
-                                                        id="faq2"
-                                                        class="answer collapse"
-                                                        data-bs-parent=".faq-list"
-                                                    >
-                                                        <div class="mb-md-4">
-                                                            <p>
-                                                                content
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div
-                                                        data-bs-toggle="collapse"
-                                                        class="question py-4 py-md-4 collapsed collapse-icon-wrap"
-                                                        href="#faq3"
-                                                        aria-expanded="false"
-                                                    >
-                                                        İade
-                                                        <i class="collapse-icon"></i>
-                                                    </div>
-                                                    <div
-                                                        id="faq3"
-                                                        class="answer collapse"
-                                                        data-bs-parent=".faq-list"
-                                                    >
-                                                        <div class="mb-md-4">
-                                                            <p>
-                                                                content
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="block related-carrousel mt-4 mt-md-5">
-            <div class="container-fluid">
-                <div class="related-carrousel-title my-3 my-md-3 fw-semibold">
-                    İLGİNİZİ ÇEKEBİLECEK DİĞER ÜRÜNLER
-                </div>
-                <Swiper
-                    onSlideChange={() => console.log("slide change")}
-                    onSwiper={(swiper) => console.log(swiper)}
-                    breakpoints={{
-                        // when window width is >= 640px
-                        320: {
-                            spaceBetween: 15,
-                            slidesPerView: 2,
-                        },
-                        // when window width is >= 768px
-                        768: {
-                            spaceBetween: 15,
-                            slidesPerView: 5,
-                        },
-                    }}
-                >
-                    <SwiperSlide>
-                        <div class="item">
-                            <a href="#">
-                                <img
-                                    src="/images/demo/demo-related-01.jpg"
-                                    alt="product"
-                                    class="w-100"
-                                />
-                                <div class="item-title mt-2 mt-md-2">
-                                    Kısa triko V yaka elbise
-                                </div>
-                                <div class="item-info">
-                                    <span class="price">
-                                        2.299,00 TL
-                                    </span>
-                                </div>
-                            </a>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div class="item">
-                            <a href="#">
-                                <img
-                                    src="/images/demo/demo-related-02.jpg"
-                                    alt="product"
-                                    class="w-100"
-                                />
-                                <div class="item-title mt-2 mt-md-2">
-                                    Kısa triko V yaka elbise
-                                </div>
-                                <div class="item-info">
-                                    <span class="price">
-                                        2.299,00 TL
-                                    </span>
-                                </div>
-                            </a>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div class="item">
-                            <a href="#">
-                                <img
-                                    src="/images/demo/demo-related-03.jpg"
-                                    alt="product"
-                                    class="w-100"
-                                />
-                                <div class="item-title mt-2 mt-md-2">
-                                    Kısa triko V yaka elbise
-                                </div>
-                                <div class="item-info">
-                                    <span class="price">
-                                        2.299,00 TL
-                                    </span>
-                                </div>
-                            </a>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div class="item">
-                            <a href="#">
-                                <img
-                                    src="/images/demo/demo-related-04.jpg"
-                                    alt="product"
-                                    class="w-100"
-                                />
-                                <div class="item-title mt-2 mt-md-2">
-                                    Kısa triko V yaka elbise
-                                </div>
-                                <div class="item-info">
-                                    <span class="price">
-                                        2.299,00 TL
-                                    </span>
-                                </div>
-                            </a>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div class="item">
-                            <a href="#">
-                                <img
-                                    src="/images/demo/demo-related-05.jpg"
-                                    alt="product"
-                                    class="w-100"
-                                />
-                                <div class="item-title mt-2 mt-md-2">
-                                    Kısa triko V yaka elbise
-                                </div>
-                                <div class="item-info">
-                                    <span class="price">
-                                        2.299,00 TL
-                                    </span>
-                                </div>
-                            </a>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div class="item">
-                            <a href="#">
-                                <img
-                                    src="/images/demo/demo-related-06.jpg"
-                                    alt="product"
-                                    class="w-100"
-                                />
-                                <div class="item-title mt-2 mt-md-2">
-                                    Kısa triko V yaka elbise
-                                </div>
-                                <div class="item-info">
-                                    <span class="price">
-                                        2.299,00 TL
-                                    </span>
-                                </div>
-                            </a>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div class="item">
-                            <a href="#">
-                                <img
-                                    src="/images/demo/demo-related-07.jpg"
-                                    alt="product"
-                                    class="w-100"
-                                />
-                                <div class="item-title mt-2 mt-md-2">
-                                    Kısa triko V yaka elbise
-                                </div>
-                                <div class="item-info">
-                                    <span class="price">
-                                        2.299,00 TL
-                                    </span>
-                                </div>
-                            </a>
-                        </div>
-                    </SwiperSlide>
-                </Swiper>
-            </div>
-        </div>
-
-        <div class="block related-carrousel mt-4 mt-md-5">
-            <div class="container-fluid">
-                <div class="related-carrousel-title my-3 my-md-3 fw-semibold">
-                    GÖRÜNTÜLENEN SON ÜRÜNLER
-                </div>
-                <Swiper
-                    spaceBetween={15}
-                    slidesPerView={5}
-                    onSlideChange={() => console.log("slide change")}
-                    onSwiper={(swiper) => console.log(swiper)}
-                    breakpoints={{
-                        // when window width is >= 640px
-                        320: {
-                            spaceBetween: 15,
-                            slidesPerView: 2,
-                        },
-                        // when window width is >= 768px
-                        768: {
-                            spaceBetween: 15,
-                            slidesPerView: 5,
-                        },
-                    }}
-                >
-                    <SwiperSlide>
-                        <div class="item">
-                            <a href="#">
-                                <img
-                                    src="/images/demo/demo-related-01.jpg"
-                                    alt="product"
-                                    class="w-100"
-                                />
-                                <div class="item-title mt-2 mt-md-2">
-                                    Kısa triko V yaka elbise
-                                </div>
-                                <div class="item-info">
-                                    <span class="price">
-                                        2.299,00 TL
-                                    </span>
-                                </div>
-                            </a>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div class="item">
-                            <a href="#">
-                                <img
-                                    src="/images/demo/demo-related-02.jpg"
-                                    alt="product"
-                                    class="w-100"
-                                />
-                                <div class="item-title mt-2 mt-md-2">
-                                    Kısa triko V yaka elbise
-                                </div>
-                                <div class="item-info">
-                                    <span class="price">
-                                        2.299,00 TL
-                                    </span>
-                                </div>
-                            </a>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div class="item">
-                            <a href="#">
-                                <img
-                                    src="/images/demo/demo-related-03.jpg"
-                                    alt="product"
-                                    class="w-100"
-                                />
-                                <div class="item-title mt-2 mt-md-2">
-                                    Kısa triko V yaka elbise
-                                </div>
-                                <div class="item-info">
-                                    <span class="price">
-                                        2.299,00 TL
-                                    </span>
-                                </div>
-                            </a>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div class="item">
-                            <a href="#">
-                                <img
-                                    src="/images/demo/demo-related-04.jpg"
-                                    alt="product"
-                                    class="w-100"
-                                />
-                                <div class="item-title mt-2 mt-md-2">
-                                    Kısa triko V yaka elbise
-                                </div>
-                                <div class="item-info">
-                                    <span class="price">
-                                        2.299,00 TL
-                                    </span>
-                                </div>
-                            </a>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div class="item">
-                            <a href="#">
-                                <img
-                                    src="/images/demo/demo-related-05.jpg"
-                                    alt="product"
-                                    class="w-100"
-                                />
-                                <div class="item-title mt-2 mt-md-2">
-                                    Kısa triko V yaka elbise
-                                </div>
-                                <div class="item-info">
-                                    <span class="price">
-                                        2.299,00 TL
-                                    </span>
-                                </div>
-                            </a>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div class="item">
-                            <a href="#">
-                                <img
-                                    src="/images/demo/demo-related-06.jpg"
-                                    alt="product"
-                                    class="w-100"
-                                />
-                                <div class="item-title mt-2 mt-md-2">
-                                    Kısa triko V yaka elbise
-                                </div>
-                                <div class="item-info">
-                                    <span class="price">
-                                        2.299,00 TL
-                                    </span>
-                                </div>
-                            </a>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div class="item">
-                            <a href="#">
-                                <img
-                                    src="/images/demo/demo-related-07.jpg"
-                                    alt="product"
-                                    class="w-100"
-                                />
-                                <div class="item-title mt-2 mt-md-2">
-                                    Kısa triko V yaka elbise
-                                </div>
-                                <div class="item-info">
-                                    <span class="price">
-                                        2.299,00 TL
-                                    </span>
-                                </div>
-                            </a>
-                        </div>
-                    </SwiperSlide>
-                </Swiper>
+                <div class="banner-wrap" style="background-image: url(../assets/img/home-demo-1.webp);">2</div>
             </div>
         </div>
     </main>
 
-            <footer class="footer mt-5 py-5 mt-md-5 ps-md-3 py-md-5">
-                <div class="container-fluid">
-                    <div class="footer-top-menu border-top border-bottom py-3 py-md-3">
-                        <ul>
-                            <li>
-                                <a href="">Yardım</a>
-                            </li>
-                            <li>
-                                <a href="">Şirket</a>
-                            </li>
-                            <li>
-                                <a href="">İletişim</a>
-                            </li>
-                            <li>
-                                <a href="">Siparişinizi Bulun</a>
-                            </li>
-                            <li>
-                                <a href="">Erişilebilirlik</a>
-                            </li>
-                            <li>
-                                <a href="">Mağaza Bulucu</a>
-                            </li>
-                            <li>
-                                <a href="">Gift Card</a>
-                            </li>
-                            <li>
-                                <a href="">Çerez Ayarları</a>
-                            </li>
-                        </ul>
-                    </div>
+    <footer class="footer pt-3 pt-md-4 mt-3">
+        <div class="container-fluid">
+            <div class="footer-top-menu py-3 py-md-3 text-center">
+                <ul>
+                    <li>
+                        <a href="">Şirket Bilgileri</a>
+                    </li>
+                    <li>
+                        <a href="">Gizlilik Politikası</a>
+                    </li>
+                    <li>
+                        <a href="">Çerez Politikası</a>
+                    </li>
+                    <li>
+                        <a href="">Teslimat ve Kargo</a>
+                    </li>
+                    <li>
+                        <a href="">İletişim</a>
+                    </li>
+                </ul>
+            </div>
 
-                    <div class="footer-social-menu mt-3 mt-md-3">
-                        <ul>
-                            <li>
-                                <a href="">
-                                    <svg width="21" height="20" fill="none">
-                                        <path
-                                            d="M20.969 10c0-5.523-4.477-10-10-10s-10 4.477-10 10c0 4.991 3.657 9.128 8.437 9.878v-6.987H6.867V10h2.54V7.797c0-2.506 1.492-3.89 3.776-3.89 1.094 0 2.239.195 2.239.195v2.46H14.16c-1.242 0-1.63.771-1.63 1.563V10h2.774l-.444 2.89h-2.33v6.988c4.78-.75 8.438-4.887 8.438-9.878z"
-                                            fill="#7E7E7E"
-                                        ></path>
-                                        <path
-                                            d="M14.861 12.89l.444-2.89H12.53V8.125c0-.79.388-1.563 1.63-1.563h1.26v-2.46s-1.143-.196-2.238-.196c-2.284 0-3.777 1.385-3.777 3.89V10H6.867v2.89h2.54v6.988c1.035.163 2.089.163 3.124 0v-6.987h2.33z"
-                                            fill="#000"
-                                        ></path>
-                                        <defs>
-                                            <clipPath id="clip0">
-                                                <path
-                                                    fill="#fff"
-                                                    transform="translate(.969)"
-                                                    d="M0 0h20v20H0z"
-                                                ></path>
-                                            </clipPath>
-                                        </defs>
-                                    </svg>
-                                </a>
-                            </li>
-                            <li>
-                                <svg width="20" height="20" fill="none">
-                                    <path
-                                        d="M14.48 0H5.52A5.525 5.525 0 000 5.52v8.96A5.525 5.525 0 005.52 20h8.96A5.526 5.526 0 0020 14.48V5.52A5.525 5.525 0 0014.48 0zm3.745 14.48a3.75 3.75 0 01-3.744 3.745H5.519a3.749 3.749 0 01-3.745-3.744V5.519A3.749 3.749 0 015.52 1.774h8.961a3.75 3.75 0 013.745 3.745v8.962z"
-                                        fill="#7E7E7E"
-                                    ></path>
-                                    <path
-                                        d="M10 4.847A5.16 5.16 0 004.846 10 5.16 5.16 0 0010 15.153 5.16 5.16 0 0015.153 10 5.16 5.16 0 0010 4.847zm0 8.532A3.383 3.383 0 016.62 10 3.383 3.383 0 0110 6.621 3.383 3.383 0 0113.379 10a3.383 3.383 0 01-3.38 3.379zM15.37 3.342a1.306 1.306 0 00-1.302 1.301c0 .342.14.678.383.92.24.242.577.382.919.382.343 0 .678-.14.92-.381a1.307 1.307 0 000-1.84 1.307 1.307 0 00-.92-.382z"
-                                        fill="#7E7E7E"
-                                    ></path>
-                                </svg>
-                            </li>
-                            <li>
-                                <a href="">
-                                    <svg width="21" height="20" fill="none">
-                                        <path
-                                            d="M10.969 20c5.523 0 10-4.477 10-10s-4.477-10-10-10-10 4.477-10 10 4.477 10 10 10z"
-                                            fill="#000"
-                                        ></path>
-                                        <path
-                                            d="M10.969 0c-5.523 0-10 4.477-10 10 0 4.239 2.633 7.86 6.354 9.317-.09-.79-.165-2.008.033-2.873.18-.781 1.168-4.97 1.168-4.97s-.296-.602-.296-1.482c0-1.391.807-2.428 1.81-2.428.857 0 1.268.642 1.268 1.407 0 .856-.543 2.14-.831 3.334-.239.995.502 1.81 1.481 1.81 1.778 0 3.144-1.876 3.144-4.576 0-2.395-1.72-4.066-4.18-4.066-2.848 0-4.52 2.132-4.52 4.338 0 .856.33 1.777.742 2.28.082.098.09.189.065.288-.074.312-.246.995-.28 1.135-.04.181-.148.223-.337.132-1.25-.584-2.033-2.403-2.033-3.876 0-3.153 2.288-6.05 6.61-6.05 3.464 0 6.164 2.47 6.164 5.778 0 3.449-2.173 6.222-5.185 6.222-1.013 0-1.967-.527-2.288-1.152l-.626 2.379c-.222.872-.831 1.958-1.243 2.625.939.288 1.926.445 2.963.445 5.523 0 10-4.478 10-10A9.98 9.98 0 0010.97 0z"
-                                            fill="#7E7E7E"
-                                        ></path>
-                                        <defs>
-                                            <clipPath id="clip0">
-                                                <path
-                                                    fill="#fff"
-                                                    transform="translate(.969)"
-                                                    d="M0 0h20v20H0z"
-                                                ></path>
-                                            </clipPath>
-                                        </defs>
-                                    </svg>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="">
-                                    <svg
-                                        width="29"
-                                        height="20"
-                                        viewBox="0 0 29 20"
-                                        fill="none"
-                                    >
-                                        <path
-                                            d="M28.1308 3.12324C27.8016 1.89323 26.835 0.926623 25.605 0.597366C23.3754 0 14.4408 0 14.4408 0C14.4408 0 5.50618 0 3.279 0.597366C2.04899 0.926623 1.08238 1.89323 0.753128 3.12324C0.155762 5.35042 0.155762 10 0.155762 10C0.155762 10 0.155762 14.6496 0.753128 16.8768C1.08238 18.1068 2.04899 19.0734 3.279 19.4026C5.50618 20 14.4408 20 14.4408 20C14.4408 20 23.3754 20 25.6026 19.4026C26.8326 19.0734 27.7992 18.1068 28.1285 16.8768C28.7258 14.6496 28.7258 10 28.7258 10C28.7258 10 28.7258 5.35042 28.1308 3.12324Z"
-                                            fill="#7E7E7E"
-                                        ></path>
-                                        <path
-                                            d="M11.5833 14.2849V5.71484L19.008 9.99989L11.5833 14.2849Z"
-                                            fill="black"
-                                        ></path>
-                                        <defs>
-                                            <clipPath id="clip0">
-                                                <rect
-                                                    width="28.5701"
-                                                    height="20"
-                                                    fill="white"
-                                                    transform="translate(0.155762)"
-                                                ></rect>
-                                            </clipPath>
-                                        </defs>
-                                    </svg>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="footer-bottom-menu mt-4 mt-md-5">
-                        <ul>
-                            <li>
-                                <a href="">Gizlilik Politikası</a>
-                            </li>
-                            <li>
-                                <a href="">Satın Ama Koşulları</a>
-                            </li>
-                            <li>
-                                <a href="">
-                                    ITX Turkey Perakende İthalat İhracat ve
-                                    Ticaret Limited Şirketi Büyük Mükellefler
-                                    Vergi Dairesi Vergi Numarası: 69960059923
-                                </a>
-                            </li>
-                            <li class="d-inline-block me-2 me-md-2">
-                                <a href="">Şart ve Koşullar</a>
-                            </li>
-                            <li class="d-inline-block me-2 me-md-2">
-                                <a href="">Çerez Bilgileri</a>
-                            </li>
-                            <li class="d-inline-block me-2 me-md-2">
-                                <a href="">Şirket Bilgileri</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </footer>
+            <div class="footer-bottom-menu text-center py-3">
+                <ul>
+                    <li class="mt-2">
+                        <p class="m-0">Telif hakkı © 2023 Ezaluz. Tüm hakları saklıdır.</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
