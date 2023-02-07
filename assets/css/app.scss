@@ -39,8 +39,7 @@ ul {
 }
 
 button,
-a,
-* {
+a {
 	outline: none;
 	&:hover,
 	&:focus,
@@ -52,7 +51,7 @@ a,
 }
 
 .row {
-	width: 100%;
+	//width: 100%;
 	clear: both;
 }
 
@@ -92,7 +91,7 @@ a {
 		font-size: 14px;
 	}
 	.header-left {
-		padding: 6px 0;
+		//padding: 6px 0;
 		.navbar-brand {
 			margin: 0 0;
 			display: inline-block;
@@ -103,7 +102,7 @@ a {
 		}
 	}
 	.header-center {
-		padding: 15px 0;
+		//padding: 15px 0;
 		li {
 			display: inline-block;
 			margin: 0 10px;
@@ -115,7 +114,7 @@ a {
 		}
 	}
 	.header-right {
-		padding: 15px 0;
+		//padding: 15px 0;
 		li {
 			display: inline-block;
 			margin: 0 0 0 10px;
@@ -178,6 +177,8 @@ a {
 		}
 	}
 	.product-content {
+		width: 100%;
+		overflow: hidden;
 		.product-image {
 			display: flex;
 			justify-content: flex-start;
@@ -439,6 +440,28 @@ a {
 	}
 }
 
+.pagination {
+	li {
+		a {
+			color: $color2;
+			font-size: 14px;
+			border-color: $color6 !important;
+			&:active,
+			&:hover {
+				background-color: transparent;
+				color: $color2;
+				border-color: $color6 !important;
+			}
+		}
+		&.active {
+			a {
+				background-color: $color2;
+				border-color: $color2;
+			}
+		}
+	}
+}
+
 // media query's
 @media only screen and (max-width: 600px) {
 	body {
@@ -465,7 +488,10 @@ a {
 		}
 	}
 	.main {
-		margin: 60px 0 0 0;
+		margin: 45px 0 0 0;
+		.page-title {
+			font-size: 17px;
+		}
 		.product-content {
 			.container-fluid {
 				padding: 0;
